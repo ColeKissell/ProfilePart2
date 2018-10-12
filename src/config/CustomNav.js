@@ -1,17 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-// import AppBar from '@material-ui/core/AppBar';
-// import Toolbar from '@material-ui/core/Toolbar';
-// import List from '@material-ui/core/List';
-// import MenuItem from '@material-ui/core/MenuItem';
-// import TextField from '@material-ui/core/TextField';
-// import Typography from '@material-ui/core/Typography';
-// import Divider from '@material-ui/core/Divider';
 import { Link } from "react-router-dom";
-// import { mailFolderListItems, otherMailFolderListItems } from './tileData';
 import Routes from './Routes'
 
 const drawerWidth = 120;
@@ -21,7 +12,7 @@ const styles = theme => ({
         flexGrow: 1,
     },
     appFrame: {
-        height: 440,
+        height: '100%',
         zIndex: 1,
         overflow: 'hidden',
         position: 'relative',
@@ -66,18 +57,12 @@ class PermanentDrawer extends React.Component {
         const { anchor } = this.state;
 
         const drawer = <Drawer variant="permanent" classes={{ paper: classes.drawerPaper }} anchor={anchor}>
-            {/* <div className={classes.toolbar} />
-            <Divider /> */}
-            {/* <List>{mailFolderListItems}</List> */}
             <ul>
                 <li>
                     <Link to="/">Home</Link>
                 </li>
                 <li>
                     <Link to="/about">About</Link>
-                </li>
-                <li>
-                    <Link to="/aboutog">About OG</Link>
                 </li>
                 <li>
                     <Link to="/topics">Topics</Link>
@@ -91,6 +76,16 @@ class PermanentDrawer extends React.Component {
                 <li>
                     <Link to="/TicTacToe">Tic-Tac-Toe</Link>
                 </li>
+                <li>
+                    <Link to="/AboutPage">Personal About Page</Link>
+                </li>
+                <li>
+                    <Link to="/Contact">Contact Me</Link>
+                </li>
+                <li>
+                    <Link to="/ProjectsPage">Projects</Link>
+                </li>
+
             </ul>
           </Drawer>;
 
@@ -105,34 +100,9 @@ class PermanentDrawer extends React.Component {
 
         return (
             <div className={classes.root}>
-                {/* <TextField
-                    id="permanent-anchor"
-                    select
-                    label="Anchor"
-                    value={anchor}
-                    onChange={this.handleChange}
-                    margin="normal"
-                >
-                    <MenuItem value="left">left</MenuItem>
-                    <MenuItem value="right">right</MenuItem>
-                </TextField> */}
                 <div className={classes.appFrame}>
-                    {/* <AppBar
-                        position="absolute"
-                        className={classNames(classes.appBar, classes[`appBar-${anchor}`])}
-                    >
-                        <Toolbar>
-                            <Typography variant="title" color="inherit" noWrap>
-                                Permanent drawer
-              </Typography>
-                        </Toolbar>
-                    </AppBar> */}
                     {before}
                     <Routes/>
-                    {/* <main className={classes.content}>
-                        <div className={classes.toolbar} />
-                        <Typography>{'You think water moves fast? You should see ice.'}</Typography>
-                    </main> */}
                     {after}
                 </div>
             </div>

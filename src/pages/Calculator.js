@@ -1,11 +1,12 @@
 import React, { Component, Fragment } from 'react'
-import DiceBag from '../dice-bag/DiceBag'
+import Calculator from '../Calculator/CalculatorStart'
+
 
 export default class extends Component {
     render() {
         return (
             <Fragment>
-                <DiceBag/>
+                <Calculator/>
             </Fragment>
         )
     }

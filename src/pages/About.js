@@ -10,10 +10,5 @@ export default class About extends React.Component {
     }
 }
 
-export const AboutOG = () => (
-    <div>
-      <h2>About Original Function</h2>
-    </div>
-  );
 
 

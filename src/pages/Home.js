@@ -1,9 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-// import {About, AboutOG } from './About'
-
 import CustomNav from '../config/CustomNav'
-
 const BasicExample = () => (
   <Router>
     <div>

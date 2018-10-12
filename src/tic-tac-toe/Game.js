@@ -1,6 +1,11 @@
 import React from 'react';
 import Board from './Board';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
+import Button from "@material-ui/core/Button";
+import Chip from '@material-ui/core/Chip';
+// import Paper from '@material-ui/core/Paper';
+import List from '@material-ui/core/List';
+// import ListItem from '@material-ui/core/ListItem';
 
  class Game extends React.Component {
     constructor(props) {
@@ -53,7 +58,7 @@ import ReactDOM from 'react-dom';
           'Go to game start';
         return (
           <li key={move}>
-            <button onClick={() => this.jumpTo(move)}>{desc}</button>
+            <Button   size = "medium" variant="outlined" onClick={() => this.jumpTo(move)}>{desc}</Button>
           </li>
         );
       });
@@ -69,7 +74,8 @@ import ReactDOM from 'react-dom';
       }
   
       return (
-        <div className="game">
+        <div>
+            <div className="game">
           <div className="game-board">
             <Board
               squares={current.squares}
@@ -77,10 +83,18 @@ import ReactDOM from 'react-dom';
             />
           </div>
           <div className="game-info">
-            <div>{status}</div>
-            <ol>{moves}</ol>
+          <Chip
+               label={status}
+               size="Large"
+               variant="outlined" 
+          ></Chip>
+            {/* <div>{status}</div> */}
+            <List>{moves}</List>
           </div>
         </div>
+
+        </div>
+        
       );
     }
   }

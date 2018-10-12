@@ -1,0 +1,58 @@
+.flex{
+    display: flex;
+    background-color: rbg(10, 10, 10);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(125, 125, 125);
+}
+header{
+    background: linear-gradient(rgb(0, 0, 0), rgb(243, 226, 226));
+    display: flex;
+    justify-content: space-between;
+}
+
+h1{
+    font-family: cursive;
+    color: rgb(18, 18, 184);
+    text-shadow: .1rem .1rem .1rem rgb(169, 209, 171);
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    background: linear-gradient(rgb(243, 226, 226), rgb(0, 0, 0));
+}
+article{
+    margin: .25rem;
+    background-color: teal;
+    border: .5rem solid;
+    box-shadow: 0rem 0rem 0rem .25rem green;
+    border-radius: .5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+section{
+    text-align: center;
+}
+ul{
+    width: 6em;
+    padding-top: 0;
+    padding-left: 4em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#search{
+    align-self: center; 
+}
+#pic{
+    width: 15rem;
+    margin: 2rem;
+    padding: 1rem;
+    font-family: fantasy;
+    border: .125rem double;
+    text-emphasis: emphasis;
+    font-size: 2.5rem;
+}
